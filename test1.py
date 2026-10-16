@@ -24,25 +24,9 @@ d=pd.DataFrame({"name":"biology","marks":67,"grade":"b"},index=[5])
 df=pd.concat([df,d], ignore_index=True)
 print(df)
 """
-df=pd.read_csv("customers-100.csv")
-print(df.to_string())
-
-
-
-
-
-
-
-
-d
-f
-g
-j
-j
-j
-j
-j
-
+df=pd.read_csv("customers-100.csv", index_col="Phone 2")
+print(df)
+##print(df.loc[2])
 
 
 
