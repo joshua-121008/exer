@@ -24,9 +24,22 @@ d=pd.DataFrame({"name":"biology","marks":67,"grade":"b"},index=[5])
 df=pd.concat([df,d], ignore_index=True)
 print(df)
 """
+"""
 df=pd.read_csv("customers-100.csv", index_col="Phone 2")
 print(df)
 ##print(df.loc[2])
+
+"""
+students={"name":["joshua","leon","john","nishitha"],
+          "age":[18,18,51,18],
+          "cgpa":[3.5,3.6,3.7,3.8]
+          }
+a=pd.DataFrame(students,index=['a','b','c','d'])
+a["medium"]=["english","english","english","english"]
+a=pd.concat([a,pd.DataFrame({"name":["samuel","joshua"],"age":[20,21],"cgpa":[3.5,3.6],"medium":["english","english"]},index=['f','g'])])
+print(a)
+filter=a[a["age"]!=20]   
+print(filter)
 
 
 
